@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(234, 234, 234);
+}
+
+/* profile-card */
+
+.profile-card{
+    max-width: 400px;
+    width: 100%;
+    background-color:rgb(234, 234, 234);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.profile-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35%;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    background-color: #0582CA;
+}
+
+/* image */
+
+.image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #0582CA;
+    /* rgb(71, 71, 113) */
+    padding: 3px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.profile-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgb(234, 234, 234);
+}
+
+/* data */
+
+.data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* links */
+
+.media-links{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(234, 234, 234);
+    font-size: 1rem;
+    height: 2rem;
+    width: 2rem;
+    margin: 0 8px;
+    border-radius: 50%;
+    background-color: #0582CA;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.links.one{
+    background-color: #1DA1F2;
+}
+
+.links.two{
+    background-color: #0679c1;
+}
+
+.links.three{
+    background-color: #E1306C;
+}
+
+.links.four{
+    background-color: #FF0000;
+}
+
+.links:hover{
+    background-color: transparent;
+    color: #0582CA;
+    box-shadow: none;
+}
+
+/* button{
+    border: none;
+    border-radius: 1rem;
+    margin-top: 15px;
+    padding: 5px 20px 5px 20px ;
+    background-color: rgb(71, 71, 113);
+    color: rgb(234, 234, 234);
+    font-size: 0.8rem;
+    font-weight: 550;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: rgb(234, 234, 234);
+    border: 3px soild rgb(71, 71, 113);
+    color: rgb(71, 71, 113);
+} */
+
+/* button */
+
+.buttons{
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+button{
+    border-radius: 1rem;
+    background-color: #0582CA;
+    border: none;
+    color: rgb(234, 234, 234);
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 7px;
+    width: 120px;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .3);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s;
+}
+  
+button:after {
+    content: '☎';
+    position: absolute;
+    opacity: 0;  
+    right: -20px;
+    transition: 0.5s;
+}
+
+button.second:after {
+    content: '➤';
+}
+  
+button:hover{
+    padding-right: 24px;
+    padding-left: 8px;
+}
+  
+button:hover:after {
+    opacity: 1;
+    right: 15px;
+}
